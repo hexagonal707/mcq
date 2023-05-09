@@ -61,14 +61,14 @@ class _State extends State<WelcomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   GradientText(
-                    'aps',
+                    'MCQ',
                     style: const TextStyle(
                         shadows: [
                           Shadow(
                             offset: Offset(0.0, 0.0),
                           ),
                         ],
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         fontSize: 110.0,
                         letterSpacing: 5.0,
                         fontFamily: 'Inter'),

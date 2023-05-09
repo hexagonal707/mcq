@@ -34,7 +34,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
   late String _firstName;
   late String _lastName;
   late String _username;
-  late String _phoneNumber;
   late final String _email = widget.savedEmail;
   late final String _password = widget.savedPassword;
   File? image;
@@ -55,7 +54,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
   final _usernameController = TextEditingController();
-  final _phoneNumberController = TextEditingController();
 
   bool isButtonActive = true;
 
@@ -67,7 +65,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
     _firstNameController.addListener(updateButtonActive);
     _lastNameController.addListener(updateButtonActive);
     _usernameController.addListener(updateButtonActive);
-    _phoneNumberController.addListener(updateButtonActive);
   }
 
   @override
@@ -75,15 +72,13 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
     _firstNameController.dispose();
     _lastNameController.dispose();
     _usernameController.dispose();
-    _phoneNumberController.dispose();
     super.dispose();
   }
 
   void updateButtonActive() {
     final isButtonActive = _firstNameController.text.isNotEmpty &&
         _lastNameController.text.isNotEmpty &&
-        _usernameController.text.isNotEmpty &&
-        _phoneNumberController.text.isNotEmpty;
+        _usernameController.text.isNotEmpty;
 
     setState(
       () {
@@ -104,7 +99,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
         firstName: _firstName,
         lastName: _lastName,
         username: _username,
-        phoneNumber: _phoneNumber,
         email: _email);
 
     final json = user.toJson();
@@ -219,25 +213,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                         ],
                         textInputAction: TextInputAction.next,
                         labelText: 'Username',
-                      ),
-
-                      //Phone Number
-                      CustomContainerTextField(
-                        cursorColor: cursorColor(),
-                        controller: _phoneNumberController,
-                        onChanged: (value) {
-                          _phoneNumber = value;
-                        },
-                        padding: const EdgeInsets.only(
-                            top: 15.0, left: 20.0, right: 20.0),
-                        keyboardType: TextInputType.phone,
-                        inputFormatters: [
-                          FilteringTextInputFormatter.allow(
-                            RegExp('[0-9]'),
-                          ),
-                        ],
-                        textInputAction: TextInputAction.done,
-                        labelText: 'Phone',
                       ),
 
                       //Continue Button
