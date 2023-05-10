@@ -10,8 +10,6 @@ import 'package:mcq/widgets/custom_filled_button.dart';
 import 'package:mcq/widgets/custom_page_route_builder.dart';
 
 class LoginPage extends StatefulWidget {
-  static const String id = 'login_page';
-
   const LoginPage({Key? key}) : super(key: key);
 
   @override

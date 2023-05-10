@@ -14,7 +14,6 @@ import 'package:mcq/widgets/custom_filled_button.dart';
 import 'package:mcq/widgets/custom_page_route_builder.dart';
 
 class CreateProfilePage extends StatefulWidget {
-  static const String id = 'setup_profile_page';
   final String savedEmail;
   final String savedPassword;
 

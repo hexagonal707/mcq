@@ -7,8 +7,6 @@ import 'package:mcq/widgets/custom_container_textfield.dart';
 import 'package:mcq/widgets/custom_filled_button.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
-  static const String id = 'reset_password_page';
-
   const ForgotPasswordPage({Key? key}) : super(key: key);
 
   @override

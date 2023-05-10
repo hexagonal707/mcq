@@ -10,8 +10,6 @@ import 'package:mcq/widgets/custom_filled_button.dart';
 import 'package:mcq/widgets/custom_page_route_builder.dart';
 
 class SignUpPage extends StatefulWidget {
-  static const String id = 'signup_page';
-
   const SignUpPage({Key? key}) : super(key: key);
 
   @override
